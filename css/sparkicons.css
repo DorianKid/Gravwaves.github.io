@@ -1,0 +1,78 @@
+@font-face {
+  font-family: 'sparkicons';
+  src:  url('../fonts/sparkicons.eot?wwjpvu');
+  src:  url('../fonts/sparkicons.eot?wwjpvu#iefix') format('embedded-opentype'),
+    url('../fonts/sparkicons.ttf?wwjpvu') format('truetype'),
+    url('../fonts/sparkicons.woff?wwjpvu') format('woff'),
+    url('../fonts/sparkicons.svg?wwjpvu#sparkicons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="ic-"], [class*=" ic-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'sparkicons' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ic-menu:before {
+  content: "\e871";
+}
+.ic-text-align-left:before {
+  content: "\e898";
+}
+.ic-reload:before {
+  content: "\e810";
+}
+.ic-scroll-down:before {
+  content: "\e883";
+}
+.ic-long-up:before {
+  content: "\e8bd";
+}
+.ic-long-right:before {
+  content: "\e8be";
+}
+.ic-long-down:before {
+  content: "\e8d0";
+}
+.ic-long-left:before {
+  content: "\e8d1";
+}
+.ic-exit:before {
+  content: "\e8de";
+}
+.ic-play:before {
+  content: "\e8f4";
+}
+.ic-pause:before {
+  content: "\e8f5";
+}
+.ic-full-screen:before {
+  content: "\e938";
+}
+.ic-arrows-check:before {
+  content: "\e902";
+}
+.ic-arrows-down:before {
+  content: "\e903";
+}
+.ic-arrows-left:before {
+  content: "\e904";
+}
+.ic-arrows-right:before {
+  content: "\e905";
+}
+.ic-arrows-up:before {
+  content: "\e909";
+}
+
