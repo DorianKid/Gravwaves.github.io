@@ -7,7 +7,7 @@
     <meta name="keywords" content="divulgación, RedDyDiCyT, ciencia, U de G, UdeG, UDG">
     <meta name="author" content="@juanherrera_mx">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    <link rel="shortcut icon" href="logos/GW_icono.png">
+    <link rel="shortcut icon" href="images/GW_icono.png">
 
     <title>Organizaciones</title>
 
@@ -25,33 +25,32 @@
   </head>
   
   <body>
-    <!-- Contenedor de Navegación -->
-    <div class="nav-container transition-fade">
-      <a id="top"></a>
-      <nav>
+    <!-- NAVEGACIÓN ACTUALIZADA -->
+    <nav>
         <div class="nav-bar">
-        <!-- Menú Toggle para Móviles -->
-          <div class="nav-block nav-widget mobile-toggle right visible-sm visible-xs">
-            <i class="ic-text-align-left"></i>
-          </div>
-
-          <!-- Menú de Navegación -->
-          <div class="nav-block-group right">
-            <div class="nav-block left">
-              <ul class="menu">
-                <!-- Items de Menú con Clase de Estado Activo -->
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="investigacion.html">Investigación</a></li>
-                <li><a href="participantes.html">Participantes</a></li>
-                <li><a href="publicaciones.html">Publicaciones</a></li>
-                <li class="activo"><a href="colaboraciones.html">Colaboraciones</a></li>
-                <li><a href="difusion.html">Difusión</a></li>
-              </ul>
+            <!-- Menú Toggle para Móviles -->
+            <div class="mobile-toggle">
+                <i class="ic-text-align-left"></i>
             </div>
-          </div>
+
+            <!-- Menú de Navegación -->
+            <div class="nav-block-group">
+                <div class="nav-block">
+                    <ul class="menu">
+                        <!-- Items de Menú con Clase de Estado Activo -->
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="investigacion.html">Investigación</a></li>
+                        <li><a href="participantes.html">Participantes</a></li>
+                        <li><a href="publicaciones.html">Publicaciones</a></li>
+                        <li class="activo"><a href="colaboraciones.html">Colaboraciones</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
-      </nav>
-    </div>
+        
+        <!-- Overlay para móviles -->
+        <div class="nav-overlay"></div>
+    </nav>
 
     <div class="main-container transition-fade">
       <section data-overlay="0" data-background="fondos/galaxy2.jpg" class="height-60 parallax">
@@ -156,14 +155,13 @@
       </div>
     </section>
 
-    
-    <div class="page-footer">
+    <!-- FOOTER ACTUALIZADO -->
+    <footer>
         <div class="footer-content">
             <!-- Primera columna: Logo e información -->
             <div class="footer-section">
                 <h3>Nuestro Grupo</h3>
                 <p>Explorando el universo a través del análisis de ondas gravitacionales y contribuyendo a expandir los límites del conocimiento.</p>
-                
             </div>
             
             <!-- Segunda columna: Investigación -->
@@ -192,13 +190,13 @@
             <div class="footer-section">
                 <h3>Contacto</h3>
                 <ul class="footer-links-2">
-                    <li><i class="fas fa-map-marker-alt"></i><a href="https://g.co/kgs/wfd9uG7"> Universidad de Guadalajara, CUCEI</a></li>
-                    <li><i class="fas fa-envelope"></i><a href="mailto:fimaco.cucei@gmail.com"> fimaco.cucei@gmail.com</a></li>
-                    <li><i class="fas fa-phone"></i><a href="#"> +52 33 3456 7890</a></li>
+                    <li><a href="https://g.co/kgs/wfd9uG7"><i class="fas fa-map-marker-alt"></i> Universidad de Guadalajara, CUCEI</a></li>
+                    <li><a href="mailto:fimaco.cucei@gmail.com"><i class="fas fa-envelope"></i> fimaco.cucei@gmail.com</a></li>
+                    <li><a href="#"><i class="fas fa-phone"></i> +52 33 3456 7890</a></li>
                 </ul>
             </div>
         </div>
-    
+
         <!-- Redes sociales -->
         <div class="social-links">
             <a href="https://www.facebook.com/grupoondasgravitacionales/?locale=es_LA" class="social-link"><i class="fab fa-facebook-f"></i></a>
@@ -206,11 +204,44 @@
             <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
             <a href="#" class="social-link"><i class="fab fa-github"></i></a>
         </div>
-    
+
         <div class="footer-bottom">
             <p>&copy; 2025 Grupo de Análisis de Datos en Ondas Gravitacionales. Todos los derechos reservados.</p>
         </div>
-    </div>
+    </footer>
+    
+    <script>
+    // JavaScript para el menú móvil
+    document.addEventListener('DOMContentLoaded', function() {
+        const mobileToggle = document.querySelector('.mobile-toggle');
+        const navBlockGroup = document.querySelector('.nav-block-group');
+        const navOverlay = document.querySelector('.nav-overlay');
+        
+        if (mobileToggle && navBlockGroup) {
+            mobileToggle.addEventListener('click', function() {
+                navBlockGroup.classList.toggle('open');
+                navOverlay.classList.toggle('active');
+            });
+            
+            // Cerrar menú al hacer clic en el overlay
+            navOverlay.addEventListener('click', function() {
+                navBlockGroup.classList.remove('open');
+                navOverlay.classList.remove('active');
+            });
+            
+            // Cerrar menú al hacer clic en un enlace (móvil)
+            const menuLinks = document.querySelectorAll('.menu a');
+            menuLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    if (window.innerWidth <= 768) {
+                        navBlockGroup.classList.remove('open');
+                        navOverlay.classList.remove('active');
+                    }
+                });
+            });
+        }
+    });
+    </script>
 
 		<script src="js/vendor/jquery-2.2.0.min.js"></script>
 		<script src="js/main.js"></script>
