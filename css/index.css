@@ -116,12 +116,6 @@
 }
 
 /* ###### Foramto carrusel de la pagina ###############################################*/
-* {
-    margin: 0 auto;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 .carousel-container {
     display: flex;
     justify-content: center; /* Centra horizontalmente */
