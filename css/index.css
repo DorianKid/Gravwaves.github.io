@@ -126,14 +126,15 @@
 
 .carousel {
     position: relative;
-    width: 100%; /* Ajusta según necesites */
-    max-width: 1000px; /* Reduce si quieres que esté más centrado */
+    width: 80%; /* Ajusta según necesites */
+    max-width: 1200px; /* Reduce si quieres que esté más centrado */
     height: 500px;
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     background-color: white;
     z-index: 15;
+    margin: 0 auto; /* Añade esto para centrado adicional */
 }
 
 .carousel-track {
