@@ -52,7 +52,7 @@
     </nav>
 
     <div class="main-container transition-fade">
-      <section data-overlay="0" data-background="fondos/galaxy2.jpg" class="height-60 parallax">
+      <section data-overlay="0" data-background="fondos/redcerebral.png" data-bg-y="-74" class="height-70 parallax">
         <div id="particles-js"></div> -->
         <div class="container valign">
           <div class="row">
@@ -241,6 +241,15 @@
         }
     });
     </script>
+		<script>
+			document.addEventListener("DOMContentLoaded", function () {
+				document.querySelectorAll(".parallax").forEach(function (el) {
+				const x = el.getAttribute("data-bg-x") || 0;
+				const y = el.getAttribute("data-bg-y") || 0;
+				el.style.backgroundPosition = `${x}px ${y}px`;
+				});
+			});
+		</script>
 		<script src="js/vendor/jquery-2.2.0.min.js"></script>
 		<script src="js/main.js"></script>
     <script src="js/particles.min.js"></script>
