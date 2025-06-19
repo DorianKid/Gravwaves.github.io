@@ -1153,3 +1153,619 @@ footer::before {
         font-size: 36px;
     }
 }
+
+/* ================================
+   SISTEMA DE TABS UNIFICADO
+   ================================ */
+
+/* Estilos base para todos los tabs */
+.tabs {
+  list-style: none;
+  margin: 0 0 40px 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  border-bottom: 2px solid #eaeaea;
+  flex-wrap: wrap;
+}
+
+.tabs .tab-item {
+  display: inline-block;
+  margin: 0 15px;
+  padding: 12px 15px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tabs .tab-item:after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  transition: width 0.3s ease;
+}
+
+.tabs .tab-item.active:after,
+.tabs .tab-item:hover:after {
+  width: 100%;
+}
+
+.tabs .tab-item.active .tab-title span {
+  font-weight: 700;
+}
+
+.tab-title span {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #333;
+  text-transform: uppercase;
+  position: relative;
+}
+
+/* Modificadores de color para cada sección */
+.tabs--investigation .tab-item:after {
+  background-color: #cd9807bb;
+}
+
+.tabs--opportunities .tab-item:after {
+  background: linear-gradient(5deg, 
+    #ff9e6d 45%,   /* Naranja */
+    #ffcc89 100%   /* Amarillo - últimos rayos de sol */
+  );
+}
+
+.tabs--participants .tab-item:after {
+  background-color: #ada9a0bb;
+}
+
+.tabs--publications .tab-item:after {
+  background-color: #3507cdbb;
+}
+
+/* ================================
+   CONTENIDO DE TABS
+   ================================ */
+
+.tab-contents {
+  width: 100%;
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+/* Ajuste específico para participantes */
+.tab-contents--participants {
+  width: 50%;
+  max-width: 1000px;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* ================================
+   ESTILOS PARA INVESTIGACIÓN
+   ================================ */
+
+/* Contenedor por sección */
+.investigation-info-container {
+  background: #ffffff;
+  padding: 30px;
+  margin-bottom: 40px;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+  font-family: 'Merriweather', serif;
+  color: #1a1a1a;
+  line-height: 1.7;
+}
+
+/* Contenedor flexbox para colocar elementos lado a lado */
+.flex-container {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.main-content {
+  flex: 3;
+  min-width: 300px;
+}
+
+.sidebar-content {
+  flex: 1;
+  min-width: 250px;
+}
+
+/* Títulos */
+.investigation-info-container h1,
+.investigation-info-container h2,
+.investigation-info-container h3 {
+  font-family: 'Roboto Slab', serif;
+  color: #cd9807bb;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.investigation-info-container h1 {
+  font-size: 2rem;
+  border-bottom: 2px solid #c3c1c1;
+  padding-bottom: 10px;
+}
+
+.investigation-info-container h2 {
+  font-size: 1.6rem;
+  border-bottom: 2px solid #c3c1c1;
+  padding-bottom: 10px;
+}
+
+.investigation-info-container h3 {
+  font-size: 1.3rem;
+}
+
+/* Texto */
+.investigation-info-container p {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+/* Imágenes */
+.investigation-info-container img {
+  float: left;
+  margin: 10px 30px 20px 0;
+  max-width: 280px;
+  border-radius: 6px;
+}
+
+/* Enlaces científicos */
+.investigation-info-container a {
+  color: #0055aa;
+  text-decoration: none;
+  border-bottom: 1px dashed #0055aa;
+  transition: all 0.2s ease-in-out;
+  font-weight: 500;
+}
+
+.investigation-info-container a:hover {
+  color: #003366;
+  border-bottom: 1px solid #003366;
+}
+
+/* Listas destacadas para bibliografía o recursos */
+.investigation-info-container ul {
+  padding: 5px 15px;
+  border-radius: 6px;
+  list-style: disc inside;
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+
+.investigation-info-container ul li {
+  margin-bottom: 10px;
+  font-size: 1.05rem;
+}
+
+/* ================================
+   ESTILOS PARA PARTICIPANTES
+   ================================ */
+
+.profile-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 1rem auto 2rem;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.image-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+}
+
+.profile-image {
+  width: 150px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 3px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.profile-image:hover {
+  transform: scale(1.05);
+}
+
+.info-column {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  font-size: 24px;
+  font-weight: 700;
+  color: #2c3e50;
+  margin: 0 0 15px 0;
+  letter-spacing: 0.5px;
+}
+
+.position {
+  color: #666;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.affiliation {
+  color: #444;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+.section-title {
+  color: #005b96;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.research-lines {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.research-lines li {
+  margin-bottom: 5px;
+}
+
+.cv-link {
+  display: inline-block;
+  margin-top: 15px;
+  color: #005b96;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.cv-link:hover {
+  text-decoration: underline;
+  color: #003d66;
+}
+
+/* ================================
+   ESTILOS PARA PUBLICACIONES
+   ================================ */
+
+.publication-entry {
+  margin-bottom: 20px;
+  border-radius: 8px;
+  padding: 20px;
+  background-color: #fefefe;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.article-info h3 {
+  margin-top: 0;
+  font-size: 1.4rem;
+  color: #003366;
+  font-family: 'Roboto Slab', serif;
+}
+
+.article-info p {
+  margin: 5px 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+.article-info a {
+  color: #0055aa;
+  text-decoration: none;
+  border-bottom: 1px dashed #0055aa;
+}
+
+.article-info a:hover {
+  color: #003366;
+  border-bottom: 1px solid #003366;
+}
+
+.toggle-button {
+  display: block;
+  margin: 20px auto 0 auto;
+  background-color: #0055aa;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+
+.toggle-button:hover {
+  background-color: #003366;
+}
+
+.pdf-container {
+  display: none;
+  margin-top: 15px;
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.pdf-viewer iframe {
+  width: 100%;
+  height: 600px;
+  border: none;
+}
+
+/* ================================
+   RESPONSIVE DESIGN
+   ================================ */
+
+@media (max-width: 768px) {
+  .flex-container {
+    flex-direction: column;
+  }
+  
+  .main-content, 
+  .sidebar-content {
+    width: 100%;
+  }
+  
+  .tabs {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .tabs .tab-item {
+    margin: 5px 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .profile-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .image-column {
+    padding-bottom: 10px;
+  }
+  
+  .info-column {
+    padding-top: 0;
+  }
+}
+
+/* COLABORACIONES CSS */
+
+/* Contenedor general */
+.container-centered {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Título */
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Grid flexible */
+.partner-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Cada tarjeta */
+.partner-card {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+  transition: transform 0.2s ease;
+}
+
+.partner-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Imagen */
+.partner-card img {
+  width: 120px;
+  height: auto;
+  margin-right: 1.5rem;
+  border-radius: 8px;
+}
+
+/* Texto */
+.partner-info h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.partner-info p {
+  margin: 0.5rem 0 0;
+}
+
+.partner-info a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.partner-info a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .partner-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .partner-card img {
+    margin: 0 0 1rem 0;
+  }
+}
+
+/* INVESTIGATION */
+
+/* Estilos base (incluye aquí tu CSS unificado anterior) */
+.investigation-info-container {
+    background: #ffffff;
+    padding: 30px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+    font-family: 'Merriweather', serif;
+    color: #1a1a1a;
+    line-height: 1.7;
+    position: relative;
+}
+
+.investigation-info-container h1 {
+    font-family: 'Roboto Slab', serif;
+    color: #cd9807bb;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    border-bottom: 2px solid #c3c1c1;
+    padding-bottom: 10px;
+}
+
+.investigation-info-container p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.investigation-info-container img {
+    float: left;
+    margin: 10px 30px 20px 0;
+    max-width: 280px;
+    border-radius: 6px;
+}
+
+/* EXPANDER STYLES */
+.investigation-info-container.expandable {
+    position: relative;
+}
+
+.expand-button {
+    position: absolute;
+    top: 12px;
+    right: 20px;
+    background: #cd9807bb;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 125px;
+    height: 35px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.expand-button:hover {
+    background: #cd9807;
+    transform: scale(1.1);
+}
+
+.expandable-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, opacity 0.3s ease;
+    opacity: 0;
+}
+
+.expandable-content.expanded {
+    max-height: 2000px;
+    opacity: 1;
+    transition: max-height 0.6s ease-in, opacity 0.4s ease 0.1s;
+}
+
+.expand-button .icon {
+    transition: transform 0.3s ease;
+}
+
+.expand-button.expanded .icon {
+    transform: rotate(180deg);
+}
+
+/* Botón expander centrado */
+.expand-button {
+    display: block;
+    margin: 20px auto;
+    background: transparent;
+    color: #cd9807bb;
+    border: 2px solid #cd9807bb;
+    border-radius: 5px;
+    padding: 8px 10px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.expand-button:hover {
+    background: #cd9807bb;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Sidebar siempre visible el título, solo colapsa el contenido dentro */
+.sidebar-content .expandable-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, opacity 0.3s ease;
+    opacity: 0;
+}
+
+.sidebar-content .expandable-content.expanded {
+    max-height: 1000px; /* Ajusta a la altura que necesites */
+    opacity: 1;
+    transition: max-height 0.6s ease-in, opacity 0.4s ease 0.1s;
+}
