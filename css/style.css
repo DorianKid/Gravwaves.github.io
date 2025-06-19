@@ -1216,10 +1216,7 @@ footer::before {
 }
 
 .tabs--opportunities .tab-item:after {
-  background: linear-gradient(5deg, 
-    #ff9e6d 45%,   /* Naranja */
-    #ffcc89 100%   /* Amarillo - últimos rayos de sol */
-  );
+  background-color: #058e45bb;
 }
 
 .tabs--participants .tab-item:after {
@@ -1227,7 +1224,7 @@ footer::before {
 }
 
 .tabs--publications .tab-item:after {
-  background-color: #3507cdbb;
+  background-color: #0651dcbb;
 }
 
 /* ================================
@@ -1651,7 +1648,7 @@ footer::before {
     padding: 30px;
     margin-bottom: 40px;
     border-radius: 10px;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     font-family: 'Merriweather', serif;
     color: #1a1a1a;
     line-height: 1.7;
@@ -1768,4 +1765,55 @@ footer::before {
     max-height: 1000px; /* Ajusta a la altura que necesites */
     opacity: 1;
     transition: max-height 0.6s ease-in, opacity 0.4s ease 0.1s;
+}
+
+/* General Description Block Styling */
+.general-description-block {
+    background-color: #fff; /* White background, similar to existing blocks */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin-bottom: 30px; /* Space below the block */
+    padding: 30px; /* Internal padding */
+    text-align: justify; /* Justify text for a clean look */
+}
+
+.general-description-block h2 {
+    color: #DAA520; /* Gold/yellow color for headings */
+    font-size: 1.8em; /* Slightly larger heading for main description */
+    margin-bottom: 15px;
+    border-bottom: 2px solid #bab9b7; /* Underline with the accent color */
+    padding-bottom: 10px;
+    font-weight: bold;
+
+}
+
+.general-description-block p {
+    font-size: 1.1em; /* Good readable size for paragraphs */
+    line-height: 1.6; /* Comfortable line spacing */
+    color: #333; /* Dark grey for text */
+    margin-bottom: 15px; /* Space between paragraphs */
+}
+
+/* Ensure the .container within general-description-block also respects padding/width */
+.general-description-block .container {
+    max-width: 900px; /* Adjust as needed for content width */
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Responsive adjustments for smaller screens if necessary */
+@media (max-width: 768px) {
+    .general-description-block {
+        padding: 20px;
+    }
+
+    .general-description-block h2 {
+        font-size: 1.5em;
+    }
+
+    .general-description-block p {
+        font-size: 1em;
+    }
 }
