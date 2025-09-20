@@ -94,8 +94,7 @@ Gravwaves.github.io/
 
 ## Contribución
 
-Por ahora las contribuciones se concentran en apoyo directo: **apoyé a mi maestra para mejorar la página web de su grupo de gravitación** (estructura, estilos y organización del contenido).  
-Si más adelante se abren PRs, sugerencias:
+Por ahora las contribuciones se concentran en apoyo directo con la Dra. Claudia Moreno González.
 
 - Mantener el estilo consistente (convenciones de nombres, tamaños de imágenes y clases CSS).
 - Evitar dependencias pesadas; priorizar JS/CSS nativo.
@@ -111,5 +110,4 @@ Actualmente **no hay un archivo de licencia explícito** en el repositorio. Se s
 
 ## Agradecimientos
 
-- **Grupo de Gravitación y Análisis de Datos en Ondas Gravitacionales** (UdeG y Tec de Monterrey, campus Guadalajara).
-- A las y los estudiantes e investigadores que han compartido imágenes y material para el sitio.
+- **Grupo de Gravitación y Análisis de Datos en Ondas Gravitacionales**.
