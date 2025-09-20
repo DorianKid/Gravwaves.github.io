@@ -79,22 +79,6 @@ Gravwaves.github.io/
 
 ---
 
-## Instalación y ejecución local
-
-1. **Clonar** el repo:
-   ```bash
-   git clone https://github.com/DorianKid/Gravwaves.github.io
-   cd Gravwaves.github.io
-   ```
-2. **Abrir** `index.html` directamente en el navegador **o** levantar un servidor estático:
-   ```bash
-   # Opción Python
-   python -m http.server 8000
-   # Luego abre http://localhost:8000 en tu navegador
-   ```
-
----
-
 ## Roadmap
 
 - [ ] **Publicaciones**: filtro por año/área y visor integrado de PDF.
