@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <!-- METADATOS PRINCIPALES -->
+        <meta charset="utf-8">
+        
+        <!-- METADATOS PARA SEO Y DESCRIPCIÓN -->
+        <meta name="description" content="Museos, Conferencias, Seminarios, Videos, Teatro, Cursos, Demostraciones, Radio, TV, Estudiantes, profesores, Videoconferencias, Podcast, Interactivos, Web, Chat, Biblioteca, Publicaciones, Programas extramuros, Folletos, Exposiciones">
+        <meta name="keywords" content="divulgación, RedDyDiCyT, ciencia, U de G, UdeG, UDG">
+        <meta name="author" content="@juanherrera_mx">
+        
+        <!-- CONFIGURACIÓN RESPONSIVE -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+        
+        <!-- ICONO DE FAVORITOS -->
+        <link rel="shortcut icon" href="images/GW_icono.png">
+        
+        <!-- TÍTULO DE LA PÁGINA -->
+        <title>GWDAMX - Oportunidades</title>
+        
+        <!-- ENLACES A ESTILOS CSS EXTERNOS -->
+         
+        <!-- ESTILO PRINCIPALES DE LA PÁGINA -->
+        <!-- ESTILO PARA LA BASE COMO TIPOGRAFIA Y CUERPO -->
+        <link href="css/base.css" rel="stylesheet">
+        <!-- ESTILO PARA LAYOUT, SECCIONEs y HELPERS -->
+        <link href="css/layout.css" rel="stylesheet">
+        <!-- ESTILO PARA EL NAVBAR-->
+        <link href="css/navigation.css" rel="stylesheet">
+        <!-- ESTILO PARA EL FOOTER -->
+        <link href="css/footer.css" rel="stylesheet">
+        <!-- ESTILO PARA LAS TABS -->
+        <link href="css/tabs.css" rel="stylesheet">
+
+        <!-- ESTILO EXTRA DE LA PÁGINA -->
+        <link href="css/paginas/oportunidades.css" rel="stylesheet">
+
+        <!-- ESTILO EXTRA DE LA PÁGINA -->
+        <!-- FUENTES DE GOOGLE -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600%7CPoppins:300,400,500,600" rel="stylesheet" type="text/css">
+        <!-- ESTILO PARA ICONOS DEL MENÚ -->
+        <link href="css/sparkicons.css" rel="stylesheet">
+        <!-- ESTILOS DE W3.CSS (UTILITARIOS) -->
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
+        <!-- FONT AWESOME PARA ICONOS SOCIALES -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    </head>
+  
+    <body>
+        <!-- NAVEGACIÓN PRINCIPAL -->
+        <nav>
+            <div class="nav-bar">
+                <!-- BOTÓN TOGGLE PARA MENÚ MÓVIL -->
+                <div class="mobile-toggle">
+                    <i class="ic-text-align-left"></i>
+                </div>
+
+                <!-- CONTENEDOR DEL MENÚ DE NAVEGACIÓN -->
+                <div class="nav-block-group">
+                    <div class="nav-block">
+                        <ul class="menu">
+                            <!-- ENLACES DE NAVEGACIÓN -->
+                            <!-- Nota: "activo" indica la página actual -->
+                            <li><a href="index.html">Inicio</a></li>
+                            <li><a href="investigacion.html">Investigación</a></li>
+                            <li><a href="participantes.html">Participantes</a></li>
+                            <li><a href="publicaciones.html">Publicaciones</a></li>
+                            <li><a href="colaboraciones.html">Colaboraciones</a></li>
+                            <li class="activo"><a href="oportunidades.html">Oportunidades</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- OVERLAY PARA CERRAR MENÚ MÓVIL -->
+            <div class="nav-overlay"></div>
+        </nav>
+        
+        <!-- CONTENIDO PRINCIPAL PARA FONDO -->
+        <div class="main-container transition-fade">
+            <!-- SECCIÓN HERO CON EFECTO PARALLAX -->
+            <section id="hero" 
+                    data-overlay="2" 
+                    data-background="fondos/caballo.jpg" 
+                    class="height-40 parallax" 
+                    data-bg-y="-300">
+                
+                <!-- PARTÍCULAS ANIMADAS (EFECTO VISUAL) -->
+                <div id="particles-js"></div>
+                
+                <!-- CONTENIDO DE LA SECCIÓN HERO -->
+                <div class="container valign">
+                    <div class="row">
+                        <div class="col-md-10 text-">
+                            <h1>
+                                <strong>Oportunidades</strong>
+                            </h1> 
+                            <!-- <p>En esta página...</p> -->
+                            <!-- Comentado: Descripción adicional disponible si se necesita -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        
+        <!-- =========================================== -->
+        <!-- SECCIÓN DE PESTAÑAS - TIPOS DE OPORTUNIDADES -->
+        <!-- =========================================== -->
+        <div class="tabbed-content text-tabs">
+            <!-- LISTA DE PESTAÑAS -->
+            <ul class="tabs tabs--opportunities">
+                <!-- PESTAÑA: POST-DOCTORADO -->
+                <li class="tab-item active" data-tab="postdoc">
+                    <div class="tab-title"><span>POST-DOCTORADO</span></div>
+                </li>
+                
+                <!-- PESTAÑA: DOCTORADO -->
+                <li class="tab-item" data-tab="doctorado">
+                    <div class="tab-title"><span>DOCTORADO</span></div>
+                </li>
+                
+                <!-- PESTAÑA: MAESTRÍA -->
+                <li class="tab-item" data-tab="maestria">
+                    <div class="tab-title"><span>MAESTRÍA</span></div>
+                </li>
+                
+                <!-- PESTAÑA: LICENCIATURA -->
+                <li class="tab-item" data-tab="licenciatura">
+                    <div class="tab-title"><span>LICENCIATURA</span></div>
+                </li>
+            </ul>
+            
+            <!-- =========================================== -->
+            <!-- CONTENIDO DE LAS PESTAÑAS -->
+            <!-- =========================================== -->
+            <div class="tab-contents">
+                
+            <!-- ========== CONTENIDO POST-DOCTORADO ========== -->
+            <div id="postdoc" class="tab-content active">
+                <div class="opportunities-container">
+                    <div class="opportunity-card">
+                        <div class="opportunity-header">
+                            <div class="opportunity-icon">
+                                <i class="fas fa-user-md"></i>
+                            </div>
+                            <h2 class="opportunity-title">Post-Doctorado</h2>
+                        </div>
+                        
+                        <div class="opportunity-content">
+                            <p>Te invitamos a unirte a nuestro grupo de investigación a través de la convocatoria nacional 
+                            <a href="https://secihti.mx/convocatorias/estancias-posdoctorales-nacionales/abiertas/"><b>SECIHTI</b></a>.</p>
+                        
+                            <div class="project-card">
+                                <h4>PROGRAMAS DISPONIBLES</h4>
+
+                                <div class="important-info">
+                                    <h4><i class="fas fa-info-circle"></i> Posgrado en Ciencias en Física</h4>
+                                    <div class="timeline-item">
+                                        <div class="timeline-icon">
+                                            <i class="fas fa-graduation-cap"></i>
+                                        </div>
+                                        <div class="timeline-content">
+                                            <h5>Perfil Requerido</h5>
+                                            <p>Doctores mexicanos en Física o áreas afines</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-icon">
+                                            <i class="fas fa-calendar-alt"></i>
+                                        </div>
+                                        <div class="timeline-content">
+                                            <h5>Convocatoria</h5>
+                                            <p>Semestral</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-icon">
+                                            <i class="fa-regular fa-building"></i>
+                                        </div>
+                                        <div class="timeline-content">
+                                            <h5>Universidad</h5>
+                                            <p>Universidad de Guadalajara - CUCEI</p>
+                                        </div>
+                                    </div>
+
+                                    <a href="https://www.cucei.udg.mx/doctorados/fisica/es/inicio/" class="opportunity-button">
+                                        <i class="fas fa-external-link-alt"> </i> Ver programa
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========== CONTENIDO DOCTORADO ========== -->
+            <div id="doctorado" class="tab-content">
+                <div class="opportunities-container">
+                    <div class="opportunity-card">
+                        <div class="opportunity-header">
+                            <div class="opportunity-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <h2 class="opportunity-title">Doctorado</h2>
+                        </div>
+                        
+                        <div class="opportunity-content">
+                            <p>Te invitamos a unirte a nuestro grupo de investigación a través de la convocatoria nacional 
+                            <a href="https://secihti.mx/convocatorias/estancias-posdoctorales-nacionales/abiertas/"><b>SECIHTI</b></a>.</p>
+                        
+                            <div class="project-card">
+                                <h4>PROGRAMAS DISPONIBLES</h4>
+                                <div class="important-info">
+                                    <h4><i class="fas fa-info-circle"></i>Doctorado en Física</h4>
+                                    <div class="timeline-item">
+                                        <div class="timeline-icon">
+                                            <i class="fas fa-graduation-cap"></i>
+                                        </div>
+                                        <div class="timeline-content">
+                                            <h5>Perfil requerido</h5>
+                                            <p>Maestros mexicanos en Física o áreas afines</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-icon">
+                                            <i class="fas fa-calendar-alt"></i>
+                                        </div>
+                                        <div class="timeline-content">
+                                            <h5>Convocatoria</h5>
+                                            <p>Semestral</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-icon">
+                                            <i class="fa-regular fa-building"></i>
+                                        </div>
+                                        <div class="timeline-content">
+                                            <h5>Universidad</h5>
+                                            <p>Universidad de Guadalajara - CUCEI</p>
+                                        </div>
+                                    </div>
+                                    <a href="https://www.cucei.udg.mx/doctorados/fisica/es/inicio/" class="opportunity-button">
+                                    <i class="fas fa-external-link-alt"></i> Ver programa
+                                    </a>
+                                </div>
+
+                                <div class="important-info">
+                                    <h4><i class="fas fa-info-circle"></i>Doctorado en Ingenierías Transversales</h4>
+                                    <div class="timeline-item">
+                                        <div class="timeline-icon">
+                                            <i class="fas fa-graduation-cap"></i>
+                                        </div>
+                                        <div class="timeline-content">
+                                            <h5>Perfil requerido</h5>
+                                            <p>Maestros mexicanos en Física o áreas afines</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-icon">
+                                            <i class="fas fa-calendar-alt"></i>
+                                        </div>
+                                        <div class="timeline-content">
+                                            <h5>Convocatoria</h5>
+                                            <p>Trimestral</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-icon">
+                                            <i class="fa-regular fa-building"></i>
+                                        </div>
+                                        <div class="timeline-content">
+                                            <h5>Universidad</h5>
+                                            <p>Universidad de Monterrey - Campus Guadalajara</p>
+                                        </div>
+                                    </div>
+                                    <a href="https://www.cucei.udg.mx/doctorados/fisica/es/inicio/" class="opportunity-button">
+                                    <i class="fas fa-external-link-alt"></i> Ver programa
+                                    </a>
+                                </div>
+                                <div class="projects-list">
+                                    <h4>Proyectos de Investigación Disponibles</h4>
+                                    <p>Tipos de proyectos en los que pueden participar los estudiantes:</p>
+                                    <ul>
+                                        <li>
+                                            TEÓRICO
+                                            <span class="project-type">Modelos matemáticos y físicos</span>
+                                        </li>
+                                        <li>
+                                            NUMÉRICO
+                                            <span class="project-type">Simulaciones y cómputo</span>
+                                        </li>
+                                        <li>
+                                            CIENCIA DE DATOS
+                                            <span class="project-type">Análisis de datos y ML</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                            
+            <!-- ========== CONTENIDO MAESTRÍA ========== -->
+            <div id="maestria" class="tab-content">
+                <div class="opportunities-container">
+                    <div class="opportunity-card">
+                        <div class="opportunity-header">
+                            <div class="opportunity-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <h2 class="opportunity-title">Doctorado</h2>
+                        </div>
+                        
+                        <div class="opportunity-content">
+                            <p>Te invitamos a unirte a nuestro grupo de investigación a través de la convocatoria nacional 
+                            <a href="https://secihti.mx/convocatorias/estancias-posdoctorales-nacionales/abiertas/"><b>SECIHTI</b></a>.</p>
+                        
+                            <div class="project-card">
+                                <h4>PROGRAMAS DISPONIBLES</h4>
+                                <div class="important-info">
+                                    <h4><i class="fas fa-info-circle"></i>Maestría en Física</h4>
+                                    <div class="timeline-item">
+                                        <div class="timeline-icon">
+                                            <i class="fas fa-graduation-cap"></i>
+                                        </div>
+                                        <div class="timeline-content">
+                                            <h5>Perfil requerido</h5>
+                                            <p>Maestros mexicanos en Física o áreas afines</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-icon">
+                                            <i class="fas fa-calendar-alt"></i>
+                                        </div>
+                                        <div class="timeline-content">
+                                            <h5>Convocatoria</h5>
+                                            <p>Semestral</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-icon">
+                                            <i class="fa-regular fa-building"></i>
+                                        </div>
+                                        <div class="timeline-content">
+                                            <h5>Universidad</h5>
+                                            <p>Universidad de Guadalajara - CUCEI</p>
+                                        </div>
+                                    </div>
+                                    <a href="https://www.cucei.udg.mx/maestrias/fisica/es/inicio" class="opportunity-button">
+                                    <i class="fas fa-external-link-alt"></i> Ver programa
+                                    </a>
+                                </div>
+
+                                <div class="projects-list">
+                                    <h4>Proyectos de Investigación Disponibles</h4>
+                                    <p>Tipos de proyectos en los que pueden participar los estudiantes:</p>
+                                    <ul>
+                                        <li>
+                                            TEÓRICO
+                                            <span class="project-type">Modelos matemáticos y físicos</span>
+                                        </li>
+                                        <li>
+                                            NUMÉRICO
+                                            <span class="project-type">Simulaciones y cómputo</span>
+                                        </li>
+                                        <li>
+                                            CIENCIA DE DATOS
+                                            <span class="project-type">Análisis de datos y ML</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========== CONTENIDO LICENCIATURA ========== -->
+            <div id="licenciatura" class="tab-content">
+                <div class="opportunities-container">
+                    <div class="opportunity-card">
+                        <div class="opportunity-header">
+                            <div class="opportunity-icon">
+                                <i class="fas fa-book-open"></i>
+                            </div>
+                            <h2 class="opportunity-title">Licenciatura</h2>
+                        </div>
+                        
+                        <div class="opportunity-content">
+                            <p>Te invitamos a unirte a nuestro grupo de investigación a través de la 
+                            <a href="https://www.cucei.udg.mx/es/oferta-academica/licenciaturas/licenciatura-en-fisica"><b>Licenciatura en Física</b></a>.</p>
+                            
+                            <div class="projects-list">
+                                <h4>Oportunidades disponibles</h4>
+                                <ul>
+                                    <li>PROYECTOS MODULARES</li>
+                                    <li>TESIS</li>
+                                    <li>PRÁCTICAS PROFESIONALES</li>
+                                    <li>SERVICIO SOCIAL</li>
+                                </ul>
+                            </div>
+                            
+                            <!-- Ejemplo de proyecto modular -->
+                            <div class="project-card">
+                                <h4>Proyectos Modulares Pasados</h4>
+                                <p><strong>Análisis de datos de Ondas Gravitacionales: Evento GW200224_222234</strong></p>
+                                
+                                <button class="toggle-button" onclick="togglePDF('pdf-container-26')">
+                                Ver artículo en PDF
+                                </button>
+
+                                <div class="pdf-container" id="pdf-container-26">
+                                    <div class="pdf-viewer">
+                                        <iframe src="Modulares/2025A_Bolaños_Kevin_Análisis_de_datos_de_Ondas_Gravitacionales__Evento_GW200224_222234_2025A.pdf" frameborder="0" width="100%" height="600px"></iframe>
+                                    </div>
+                                </div>
+                                <br>
+                                <p><strong>Aproximación a a la geometría de los diagramas de Penrose y sus implicaciones físicas</strong></p>
+                                
+                                <button class="toggle-button" onclick="togglePDF('pdf-container-28')">
+                                Ver artículo en PDF
+                                </button>
+
+                                <div class="pdf-container" id="pdf-container-28">
+                                    <div class="pdf-viewer">
+                                        <iframe src="Modulares/2025A_CotaCorral_DiagramasPenrose.pdf" frameborder="0" width="100%" height="600px"></iframe>
+                                    </div>
+                                </div>
+                                <br>
+                                <p><strong>¿Cómo obtener E=mc<sup>2</sup></strong></p>
+                                
+                                <button class="toggle-button" onclick="togglePDF('pdf-container-29')">
+                                Ver artículo en PDF
+                                </button>
+
+                                <div class="pdf-container" id="pdf-container-29">
+                                    <div class="pdf-viewer">
+                                        <iframe src="Modulares/2025A_como medir E=mc2.pdf" frameborder="0" width="100%" height="600px"></iframe>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Ejemplo de proyecto modular -->
+                            <div class="project-card">
+                                <h4>Tesis Pasados</h4>
+                                <p><strong></strong></p>
+                                
+                                <button class="toggle-button" onclick="togglePDF('pdf-container-27')">
+                                Ver artículo en PDF
+                                </button>
+
+                                <div class="pdf-container" id="pdf-container-27">
+                                    <div class="pdf-viewer">
+                                        <iframe src="Modulares/TesisDaniel.pdf" frameborder="0" width="100%" height="600px"></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+                    
+        <!-- =========================================== -->
+        <!-- PIE DE PÁGINA (FOOTER) -->
+        <!-- =========================================== -->
+        <footer>
+            <div class="footer-content">
+                <!-- PRIMERA COLUMNA: INFORMACIÓN GENERAL -->
+                <div class="footer-section">
+                    <h3>Nuestro Grupo</h3>
+                    <p>Explorando el universo a través del análisis de ondas gravitacionales y contribuyendo a expandir los límites del conocimiento.</p>
+                </div>
+                
+                <!-- SEGUNDA COLUMNA: ENLACES DE INVESTIGACIÓN -->
+                <div class="footer-section">
+                    <h3>Investigación</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Gravitación</a></li>
+                        <li><a href="#">Análisis de Datos</a></li>
+                        <li><a href="#">Interferometría</a></li>
+                        <li><a href="archivos.html">Publicaciones</a></li>
+                    </ul>
+                </div>
+                
+                <!-- TERCERA COLUMNA: ENLACES ADICIONALES -->
+                <div class="footer-section">
+                    <h3>Más Información</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="participantes.html">Equipo</a></li>
+                        <li><a href="colaboraciones.html">Colaboraciones</a></li>
+                        <li><a href="https://www.ligo.caltech.edu/">LIGO</a></li>
+                    </ul>
+                </div>
+                
+                <!-- CUARTA COLUMNA: INFORMACIÓN DE CONTACTO -->
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <ul class="footer-links-2">
+                        <li>
+                            <a href="https://g.co/kgs/wfd9uG7">
+                                <i class="fas fa-map-marker-alt"></i> Universidad de Guadalajara, CUCEI
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:fimaco.cucei@gmail.com">
+                                <i class="fas fa-envelope"></i> fimaco.cucei@gmail.com
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fas fa-phone"></i> +52 33 3456 7890
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- SECCIÓN DE REDES SOCIALES -->
+            <div class="social-links">
+                <a href="https://www.facebook.com/grupoondasgravitacionales/?locale=es_LA" class="social-link">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+            </div>
+            
+            <!-- SECCIÓN INFERIOR DEL FOOTER (COPYRIGHT) -->
+            <div class="footer-bottom">
+                <p>&copy; 2025 Grupo de Análisis de Datos en Ondas Gravitacionales. Todos los derechos reservados.</p>
+            </div>
+        </footer>
+                
+        <!-- ENLACES A ARCHIVOS JAVASCRIPT EXTERNOS PARA TODAS LAS PAGINAS -->
+        <!-- Biblioteca jQuery v2.2.0 - Base para manipular el DOM, manejar eventos, animaciones y peticiones AJAX -->
+        <script src="js/jquery-2.2.0.min.js"></script> 
+        <!-- Genera el efecto de partículas animadas con puntos flotantes conectados por líneas en el fondo -->
+        <script src="js/particles.min.js"></script> 
+        <!-- Crea el efecto parallax donde los elementos se mueven a diferentes velocidades al hacer scroll -->
+        <script src="js/move-parallax.js"></script> 
+        <!-- Maneja la apertura/cierre del menú móvil hamburguesa y el overlay de fondo -->
+        <script src="js/toggle-menu.js"></script> 
+        <!-- Script principal que inicializa todos los componentes: sliders, navegación, masonry, videos, scroll suave, etc. -->
+        <script src="js/main.js"></script> 
+
+        <!-- ENLACES A ARCHIVOS JAVASCRIPT EXTERNOS EXTRAS -->
+        <!-- Controla la funcionalidad de las pestañas (tabs), activando/desactivando contenido al hacer clic -->
+        <script src="js/tab-click.js"></script> 
+        <!-- Carga archivos de código en elementos <code data-file=""> y permite mostrar/ocultar PDFs embebidos -->
+        <script src="js/toggle-pdf.js"></script> 
+        
+        <!-- -->
+    </body>
+</html>
