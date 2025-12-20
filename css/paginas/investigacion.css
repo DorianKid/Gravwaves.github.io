@@ -1,0 +1,249 @@
+/* En tu archivo layout.css o en un CSS específico para la página */
+.parallax h1 {
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bold;
+    padding-left: 40px;
+    /* Reducir el padding-top actual de 160px a algo menor */
+    padding-top: 120px; /* o 100px, o el valor que necesites */
+}
+
+/* ================================
+   BLOQUE DE DESCRIPCIÓN GENERAL
+   ================================ */
+
+.general-description-block {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 30px auto 40px;
+    padding: 40px;
+    text-align: justify;
+    max-width: 1250px;
+    font-family: 'Merriweather', serif;
+    color: #1a1a1a;
+    line-height: 1.7;
+}
+
+.general-description-block h2 {
+    color: #cd9807bb;
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.8em;
+    margin-top: 0;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #c3c1c1;
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+
+.general-description-block p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.general-description-block .container {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Responsive para el bloque general */
+@media (max-width: 768px) {
+    .general-description-block {
+        padding: 25px 20px;
+        margin: 20px 15px 30px;
+    }
+    
+    .general-description-block h2 {
+        font-size: 1.5em;
+    }
+    
+    .general-description-block p {
+        font-size: 1rem;
+    }
+}
+
+/* Contenedor que puede expandirse */
+.investigation-info-container.expandable {
+    position: relative;
+}
+
+/* Botón expander - POSICIÓN CORRECTA */
+.expand-button {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    background: #cd9807bb;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.expand-button:hover {
+    background: #cd9807;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Contenido expandible - OCULTO POR DEFECTO */
+.expandable-content {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.5s ease-out, opacity 0.4s ease-out;
+}
+
+/* Contenido expandible - VISIBLE CUANDO SE EXPANDE */
+.expandable-content.expanded {
+    max-height: 2000px; /* Valor suficientemente alto */
+    opacity: 1;
+    transition: max-height 0.8s ease-in, opacity 0.6s ease-in 0.1s;
+}
+
+/* Asegurar que el contenido dentro del expandible tenga margen */
+.expandable-content > *:first-child {
+    margin-top: 0;
+}
+
+/* Estilos específicos para el contenido principal */
+.main-content .expandable-content.expanded {
+    padding-top: 20px;
+}
+
+/* Estilos específicos para la sidebar */
+.sidebar-content .expandable-content.expanded {
+    padding-top: 15px;
+}
+
+/* Si quieres que la imagen no flote cuando está contraído */
+.investigation-info-container.expandable img {
+    transition: all 0.3s ease;
+}
+
+/* Ajustar el padding del contenedor cuando está expandido */
+.investigation-info-container.expandable .expandable-content.expanded {
+    padding-bottom: 10px;
+}
+
+/* Contenedor por sección */
+.investigation-info-container {
+    background: #ffffff;
+    padding: 30px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+    font-family: 'Merriweather', serif;
+    color: #1a1a1a;
+    line-height: 1.7;
+}
+
+/* Contenedor flexbox para colocar elementos lado a lado */
+.flex-container {
+    display: flex;
+    gap: 30px; /* Espacio entre contenedores */
+    flex-wrap: wrap; /* Permite que los elementos se apilen en dispositivos pequeños */
+}
+
+/* Definimos el ancho de los contenedores */
+.main-content {
+    flex: 3; /* Toma 2/3 del espacio disponible */
+    min-width: 300px; /* Ancho mínimo para asegurar legibilidad */
+}
+
+.sidebar-content {
+    flex: 1; /* Toma 1/3 del espacio disponible */
+    min-width: 250px; /* Ancho mínimo para asegurar legibilidad */
+}
+
+/* Títulos */
+.investigation-info-container h1,
+.investigation-info-container h2,
+.investigation-info-container h3 {
+    font-family: 'Roboto Slab', serif;
+    color: #cd9807bb;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.investigation-info-container h1 {
+    font-size: 2rem;
+    border-bottom: 2px solid #c3c1c1;
+    padding-bottom: 10px;
+}
+
+.investigation-info-container h2 {
+    font-size: 1.6rem;
+    border-bottom: 2px solid #c3c1c1;
+    padding-bottom: 10px;
+
+}
+
+.investigation-info-container h3 {
+    font-size: 1.3rem;
+}
+
+/* Texto */
+.investigation-info-container p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+/* Imágenes */
+.investigation-info-container img {
+    float: left;
+    margin: 10px 30px 20px 0;
+    max-width: 280px;
+    border-radius: 6px;
+}
+
+/* Enlaces científicos */
+.investigation-info-container a {
+    color: #0055aa;
+    text-decoration: none;
+    border-bottom: 1px dashed #0055aa;
+    transition: all 0.2s ease-in-out;
+    font-weight: 500;
+}
+
+.investigation-info-container a:hover {
+    color: #003366;
+    border-bottom: 1px solid #003366;
+}
+
+/* Listas destacadas para bibliografía o recursos */
+.investigation-info-container ul {
+    padding: 5px 15px;
+    border-radius: 6px;
+    list-style: disc inside;
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+
+.investigation-info-container ul li {
+    margin-bottom: 10px;
+    font-size: 1.05rem;
+}
+
+/* Media query para apilamiento en dispositivos pequeños */
+@media (max-width: 768px) {
+    .flex-container {
+        flex-direction: column;
+    }
+    
+    .main-content, .sidebar-content {
+        width: 100%;
+    }
+}

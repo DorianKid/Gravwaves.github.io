@@ -1,0 +1,99 @@
+/* ================================
+   SISTEMA DE TABS UNIFICADO
+   ================================ */
+
+/* Estilos base para todos los tabs */
+.tabs {
+  list-style: none;
+  margin: 0 0 40px 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  border-bottom: 2px solid #eaeaea;
+  flex-wrap: wrap;
+}
+
+.tabs .tab-item {
+  display: inline-block;
+  margin: 0 15px;
+  padding: 12px 15px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tabs .tab-item:after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  transition: width 0.3s ease;
+}
+
+.tabs .tab-item.active:after,
+.tabs .tab-item:hover:after {
+  width: 100%;
+}
+
+.tabs .tab-item.active .tab-title span {
+  font-weight: 700;
+}
+
+.tab-title span {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #333;
+  text-transform: uppercase;
+  position: relative;
+}
+
+/* Modificadores de color para cada sección */
+.tabs--investigation .tab-item:after {
+  background-color: #cd9807bb;
+}
+
+.tabs--opportunities .tab-item:after {
+  background-color: #e623b2bb;
+}
+
+.tabs--participants .tab-item:after {
+  background-color: #ada9a0bb;
+}
+
+.tabs--publications .tab-item:after {
+  background-color: #0651dcbb;
+}
+
+/* ================================
+   CONTENIDO DE TABS
+   ================================ */
+
+.tab-contents {
+  width: 100%;
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+/* Ajuste específico para participantes */
+.tab-contents--participants {
+  width: 50%;
+  max-width: 1000px;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* Los estilos específicos de cada tipo de contenido (investigación, participantes, etc.)
+   deberían ir en archivos CSS específicos por página o componente */

@@ -1,0 +1,388 @@
+/* En tu archivo layout.css o en un CSS específico para la página */
+.parallax h1 {
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bold;
+    padding-left: 40px;
+    /* Reducir el padding-top actual de 160px a algo menor */
+    padding-top: 170px; /* o 100px, o el valor que necesites */
+}
+
+/* Contenedor principal para contenido de oportunidades */
+.opportunities-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 20px 50px;
+}
+
+/* Tarjetas de oportunidad */
+.opportunity-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 35px 40px;
+    margin-bottom: 30px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    border-left: 5px solid #e623b2bb;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.opportunity-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #e623b2bb, #ff5ed6);
+    opacity: 0.7;
+}
+
+.opportunity-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(230, 35, 178, 0.15);
+}
+
+/* Encabezado de la tarjeta */
+.opportunity-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #f9f0f7;
+}
+
+.opportunity-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #e623b2bb, #ff5ed6);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    color: white;
+    font-size: 24px;
+    flex-shrink: 0;
+}
+
+.opportunity-title {
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.8rem;
+    color: #e623b2bb;
+    margin: 0;
+    font-weight: 700;
+}
+
+/* Contenido de la oportunidad */
+.opportunity-content {
+    color: #444;
+    line-height: 1.7;
+    font-size: 1.05rem;
+}
+
+.opportunity-content p {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.opportunity-content a {
+    color: #e623b2bb;
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 2px dotted #e623b2bb;
+    transition: all 0.2s ease;
+    padding: 0 2px;
+}
+
+.opportunity-content a:hover {
+    color: #c91a9a;
+    border-bottom: 2px solid #c91a9a;
+    background-color: rgba(230, 35, 178, 0.05);
+}
+
+/* Proyectos de Investigación - LISTA HORIZONTAL */
+.projects-list {
+    margin: 25px 0;
+    text-align: center;
+}
+
+.projects-list h4 {
+    color: #c91a9a;
+    font-size: 1.3rem;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-family: 'Roboto Slab', serif;
+    text-align: center;
+}
+
+.projects-list ul {
+    list-style: none;
+    padding: 0;
+    display: flex; /* Cambiado a flex para horizontal */
+    justify-content: center; /* Centra los elementos */
+    flex-wrap: wrap; /* Para que se ajusten en móvil */
+    gap: 15px; /* Espacio entre elementos */
+}
+
+.projects-list li {
+    padding: 12px 25px;
+    margin: 0; /* Quitamos márgenes verticales */
+    background: #f9f0f7;
+    border-radius: 8px;
+    font-weight: 600;
+    color: #c91a9a;
+    border: 2px solid #e623b2bb;
+    transition: all 0.3s ease;
+    min-width: 120px; /* Ancho mínimo para consistencia */
+    text-align: center;
+}
+
+.projects-list li:hover {
+    background: #e623b2bb;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(230, 35, 178, 0.2);
+}
+
+/* Estilo para indicar el tipo de proyecto */
+.project-type {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #666;
+    margin-top: 5px;
+    font-style: italic;
+}
+
+/* Tarjetas de proyecto */
+.project-card {
+    background: #fdf8fc;
+    border-radius: 10px;
+    padding: 25px;
+    margin: 25px 0;
+    border: 1px solid #f0d4e8;
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    border-color: #ff5ed6;
+    box-shadow: 0 5px 15px rgba(230, 35, 178, 0.1);
+}
+
+.project-card h4 {
+    color: #c91a9a;
+    font-size: 1.3rem;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-family: 'Roboto Slab', serif;
+}
+
+/* Botones de oportunidad - solo contorno */
+.opportunity-button {
+    display: block; /* Cambiado a block */
+    width: fit-content; /* Se ajusta al contenido */
+    margin: 15px 0 15px auto; /* auto en left, 0 en right - empuja a la derecha */
+    padding: 12px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: none;
+    background: transparent;
+    color: white;
+    text-align: center; /* Asegura que el texto esté centrado */
+}
+
+.opportunity-button:hover {
+    transform: translateY(-3px);
+    font-weight: 700;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid white;
+}
+
+/* Para los iconos dentro del botón */
+.opportunity-button i {
+    margin-right: 8px;
+}
+
+.opportunity-button.secondary {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+    box-shadow: none;
+}
+
+.opportunity-button.secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-weight: 700;
+    border: 2px solid white;
+}
+
+/* Sección de información importante */
+.important-info {
+    background: linear-gradient(135deg, #f9f0f7, #f5e1f1);
+    border-radius: 12px;
+    padding: 25px 30px;
+    margin: 30px 0;
+    border-left: 5px solid #e623b2bb;
+}
+
+.important-info h4 {
+    color: #c91a9a;
+    font-size: 1.4rem;
+    margin-top: 0;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.important-info h4 i {
+    margin-right: 10px;
+}
+
+/* Timeline visual */
+.timeline-item {
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+    padding: 15px;
+    background: white;
+    border-radius: 8px;
+    border-left: 4px solid #ff5ed6;
+}
+
+.timeline-icon {
+    width: 40px;
+    height: 40px;
+    background: #e623b2bb;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.timeline-content {
+    flex: 1;
+    display: grid; /* 👈 Cambio clave */
+    grid-template-columns: 200px 1fr; /* 👈 Define ancho fijo para h5, resto para p */
+    gap: 40px; /* SEPARACIÓN HORIZONTAL entre h5 y p */
+    align-items: center;
+}
+
+.timeline-content h5 {
+    margin: 0;
+    color: #c91a9a;
+    font-size: 1.1rem;
+    /* Ya no necesita flex-shrink porque grid controla el ancho */
+}
+
+.timeline-content p {
+    margin: 0;
+    color: #444;
+    line-height: 1.6;
+    text-align: left;
+}
+
+.toggle-button {
+  display: block;
+  margin: 20px auto 0 auto;
+  background-color: #e623b2bb;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+
+.toggle-button:hover {
+  background-color: #e623b2bb;
+}
+
+.pdf-container {
+  display: none;
+  margin-top: 15px;
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.pdf-viewer iframe {
+  width: 100%;
+  height: 600px;
+  border: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .opportunity-card {
+        padding: 25px 20px;
+    }
+    
+    .opportunity-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .opportunity-icon {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    
+    .opportunity-title {
+        font-size: 1.5rem;
+    }
+    
+    .opportunity-content p {
+        text-align: left;
+    }
+    
+    .timeline-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .timeline-icon {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.opportunity-card {
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+.opportunity-card:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.opportunity-card:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.opportunity-card:nth-child(4) {
+    animation-delay: 0.3s;
+}

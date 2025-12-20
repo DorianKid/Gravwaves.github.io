@@ -1,0 +1,561 @@
+/**! 3. Helper clases **/
+.flex-align {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: box;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+
+.flex-align.flex-bottom {
+    -webkit-align-self: flex-end;
+    align-self: flex-end;
+}
+
+.flex-align.flex-top {
+    -webkit-align-self: flex-start;
+    align-self: flex-start;
+}
+
+.valign {
+    position: relative;
+    -webkit-transform: translate3d(0, -50%, 0);
+    transform: translate3d(0, -50%, 0);
+    top: 50%;
+    z-index: 2;
+}
+
+@media all and (max-width: 767px) {
+    .valign {
+        top: 0;
+        -webkit-transform: none;
+        transform: none;
+    }
+    .text-xs-center {
+        text-align: center;
+    }
+}
+
+@media all and (max-height: 600px) {
+    .valign {
+        top: 0;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+.valign-child {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: box;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+}
+
+@media all and (max-width: 990px) {
+    .valign-child {
+        display: block !important;
+    }
+}
+
+.clearlist,
+.clearlist li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: none;
+}
+
+.relative {
+    position: relative;
+}
+
+.table {
+    display: table;
+}
+
+.table-cell {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.embed-container {
+    color: black;
+    width: 100%;
+    display: inline-block;
+    position: relative;
+}
+
+a.line-link {
+    overflow: hidden;
+    position: relative;
+}
+
+a.line-link:after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background: #fff;
+    opacity: 0;
+    -webkit-transition: all 0.27s cubic-bezier(0, 0, 0.58, 1);
+    transition: all 0.27s cubic-bezier(0, 0, 0.58, 1);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+}
+
+a.line-link:hover {
+    color: #5b90b7;
+}
+
+a.line-link:hover:after {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+}
+
+.right {
+    right: 0;
+}
+
+.left {
+    left: 0;
+}
+
+span.type-deleted {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+/**! 4. Section(height, overlay, parallax) **/
+section {
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+@media all and (max-width: 767px) {
+    section {
+        padding: 40px 0px;
+    }
+}
+
+.section-small {
+    position: relative;
+    overflow: hidden;
+}
+
+[data-overlay] {
+    position: relative;
+}
+
+[data-overlay]:before {
+    position: absolute;
+    content: '';
+    background: #232323;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+[data-overlay] *:not(.container) {
+    z-index: 2;
+}
+
+[data-overlay].overlay-light:before {
+    background: #fff;
+}
+
+[data-overlay].overlay-colored:before {
+    background: #5b90b7;
+}
+
+[data-overlay="1"]:before {
+    opacity: 0.1;
+}
+
+[data-overlay="2"]:before {
+    opacity: 0.2;
+}
+
+[data-overlay="3"]:before {
+    opacity: 0.3;
+}
+
+[data-overlay="4"]:before {
+    opacity: 0.4;
+}
+
+[data-overlay="5"]:before {
+    opacity: 0.5;
+}
+
+[data-overlay="6"]:before {
+    opacity: 0.6;
+}
+
+[data-overlay="7"]:before {
+    opacity: 0.7;
+}
+
+[data-overlay="8"]:before {
+    opacity: 0.8;
+}
+
+[data-overlay="9"]:before {
+    opacity: 0.9;
+}
+
+[data-overlay="10"]:before {
+    opacity: 1;
+}
+
+[data-overlay="0"]:before {
+    opacity: 0;
+}
+
+div[data-overlay] h1,
+div[data-overlay] h2,
+div[data-overlay] h3,
+div[data-overlay] h4,
+div[data-overlay] h5,
+div[data-overlay] h6 {
+    color: #fff;
+}
+
+div[data-overlay] p,
+div[data-overlay] ul {
+    color: #fff;
+}
+
+.height-100,
+.height-90,
+.height-80,
+.height-70,
+.height-60,
+.height-50,
+.height-40,
+.height-30,
+.height-20,
+.height-10 {
+    height: auto;
+    padding: 9em 0 7em;
+}
+
+@media all and (max-width: 767px) {
+    .height-100,
+    .height-90,
+    .height-80,
+    .height-70,
+    .height-60,
+    .height-50,
+    .height-40,
+    .height-30,
+    .height-20,
+    .height-10 {
+        height: auto;
+        padding: 8em 0 6em;
+        text-align: center;
+    }
+}
+
+@media all and (min-height: 600px) and (min-width: 767px) {
+    .height-10 {
+        height: 10vh;
+    }
+    .height-20 {
+        height: 20vh;
+    }
+    .height-30 {
+        height: 30vh;
+    }
+    .height-40 {
+        height: 40vh;
+    }
+    .height-50 {
+        height: 50vh;
+    }
+    .height-60 {
+        height: 60vh;
+    }
+    .height-70 {
+        height: 70vh;
+    }
+    .height-80 {
+        height: 80vh;
+    }
+    .height-90 {
+        height: 90vh;
+    }
+    .height-100 {
+        height: 100vh;
+    }
+}
+
+.parallax {
+    position: relative;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+.image-holder {
+    position: relative;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+.bg-dark {
+    background: #292929;
+}
+
+.bg-dark:not(nav):not(footer) h1,
+.bg-dark:not(nav):not(footer) h2,
+.bg-dark:not(nav):not(footer) h3,
+.bg-dark:not(nav):not(footer) h4,
+.bg-dark:not(nav):not(footer) h5,
+.bg-dark:not(nav):not(footer) h6 {
+    color: #fff;
+}
+
+.bg-dark:not(nav):not(footer) p,
+.bg-dark:not(nav):not(footer) span,
+.bg-dark:not(nav):not(footer) blockquote {
+    color: #d1d1d1;
+}
+
+.bg-light {
+    background: #f5f5f5;
+}
+
+.bg-colored {
+    background: #5b90b7;
+}
+
+.bg-colored * {
+    color: #fff;
+}
+
+.parallax[data-overlay] h1,
+.parallax[data-overlay] h2,
+.parallax[data-overlay] h3,
+.parallax[data-overlay] h4,
+.parallax[data-overlay] h5,
+.parallax[data-overlay] h6,
+.parallax[data-overlay] p,
+.parallax[data-overlay] span,
+.parallax[data-overlay] li,
+.parallax[data-overlay] a,
+.parallax[data-overlay] i {
+    color: #fff;
+}
+
+.image-bg h1,
+.image-bg h2,
+.image-bg h3,
+.image-bg h4,
+.image-bg h5,
+.image-bg h6,
+.image-bg p,
+.image-bg span,
+.image-bg li,
+.image-bg a,
+.image-bg i {
+    color: #fff;
+}
+
+#particles-js {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.map-canvas {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+}
+
+/**! 7. Animations **/
+[class*='transition-'] {
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
+    opacity: 0;
+}
+
+[class*='transition-'].transition-active {
+    opacity: 1;
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes slideShow {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+    5% {
+        opacity: 1;
+    }
+    33% {
+        opacity: 1;
+    }
+    41% {
+        opacity: 0;
+        -webkit-transform: scale3d(1.2, 1.2, 1);
+        transform: scale3d(1.2, 1.2, 1);
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+@keyframes slideShow {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+    5% {
+        opacity: 1;
+    }
+    33% {
+        opacity: 1;
+    }
+    41% {
+        opacity: 0;
+        -webkit-transform: scale3d(1.2, 1.2, 1);
+        transform: scale3d(1.2, 1.2, 1);
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+/**! 8. Fact counter **/
+.fact-item span,
+.fact-item i {
+    vertical-align: middle;
+    font-size: 32px;
+}
+
+.fact-item span:first-child,
+.fact-item i:first-child {
+    margin-right: 15px;
+}
+
+.fact-item .focus-number {
+    font-size: 42px;
+    font-weight: 300;
+}
+
+.fact-item .fact-icon {
+    margin-right: 15px;
+}
+
+.fact-item .fact-desc {
+    text-transform: capitalize;
+    margin-top: 25px;
+}
+
+@media all and (max-width: 767px) {
+    .fact-item .focus-number {
+        font-size: 36px;
+    }
+}
+
+/* Contenedor principal para ajustar el contenido */
+.main-container {
+    position: relative; /* Asegurar que el contenido esté sobre el fondo */
+    z-index: 1; /* Colocar sobre el fondo parallax */
+    width: 95%; /* Hacer el contenedor más ancho */
+    margin: 0 auto; /* Centrar el contenedor */
+    background-color: white; /* Fondo blanco para cubrir el parallax */
+    padding-bottom: 10px; /* Añadido padding para separar del footer */
+    box-sizing: border-box; /* Incluye padding en el cálculo del tamaño */
+}
+
+/* Asegurar que el texto dentro de la sección no se desplace mal */
+.parallax .container {
+    position: relative;
+    z-index: 2; /* Asegurar que el texto esté en la parte superior */
+    text-align: left;
+    width: 100%; /* Usar todo el ancho disponible */
+    padding: 0 10px; /* Añadir un poco de padding */
+    background-repeat: no-repeat;
+    background-size: cover; /* O 'contain' si prefieres mostrar todo */
+    background-position: 0px 0px; /* Se puede sobrescribir con inline CSS o JS */
+}
+
+.parallax h1 {
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bold;
+    padding-left: 40px;
+    padding-top: 160px;
+}

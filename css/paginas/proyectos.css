@@ -1,0 +1,338 @@
+/* Estilos para los tabs */
+.difusion-tabs {
+  list-style: none;
+  margin: 0 0 40px 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  border-bottom: 2px solid #eaeaea;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.difusion-tabs .tab-item {
+  display: inline-block;
+  margin: 0 15px;
+  padding: 12px 15px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.difusion-tabs .tab-item:after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: linear-gradient(5deg, 
+    #ff9e6d 45%,   /* Naranja */
+    #ffcc89 100% /* Amarillo - últimos rayos de sol */
+  );
+  transition: width 0.3s ease;
+}
+
+.difusion-tabs .tab-item.active:after,
+.difusion-tabs .tab-item:hover:after {
+  width: 100%;
+}
+
+.difusion-tabs .tab-item.active .difusion-tab-title span {
+  font-weight: 700;
+}
+
+.difusion-tab-title span {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #333;
+  text-transform: uppercase;
+  position: relative;
+}
+
+/* Estilos para el contenido de los tabs */
+.tab-contents {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* Contenedor general con layout horizontal */
+.difusion-tabs-vertical {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1200px;
+  margin: 40px auto;
+  /* Asegura que no esté limitado */
+  flex-wrap: nowrap;
+}
+
+/* Lista de pestañas verticales (rotadas) */
+/* Para hacer que las pestañas de categorías se mantengan visibles */
+.tab-categories {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+  background-color: #f0f0f0b5;
+  justify-content: center;
+  align-self: flex-start;
+  position: sticky; /* Hace que el elemento se quede fijo cuando se desplaza */
+  top: 20px; /* Distancia desde la parte superior cuando se fija (ajusta según necesites) */
+  z-index: 100; /* Asegura que esté por encima de otros elementos */
+}
+
+/* Pestañas con texto rotado */
+.tab-categories .tab-item-category {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  background: linear-gradient(180deg, 
+    #ff9e6d 0%,   /* Naranja */
+    #ffcc89 60% /* Amarillo - últimos rayos de sol */
+  );
+  padding: 10px 12px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #ffffff;
+  border-radius: 6px 6px 0 0;
+  transition: all 0.3s ease;
+  border-left: 4px solid transparent;
+  text-align: center;
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tab-categories .tab-item-category:hover,
+.tab-categories .tab-item-category.active {
+  background-color: #1A365D;
+  border-left: 4px solid #010101;
+  color: #000;
+}
+
+/* Área donde se muestran los contenidos */
+.tab-contents-vertical {
+  flex: 1;
+  padding: 0 30px;
+}
+
+/* Contenido de cada tab (videos) */
+.tab-content-video {
+  display: none;
+}
+
+.tab-content-video.active {
+  display: block;
+}
+
+/* Estilo para cada entrada de video */
+.video-entry {
+  margin-bottom: 30px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #fefefe;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.video-entry h3 {
+  margin-top: 0;
+  color: #003366;
+  font-family: 'Roboto Slab', serif;
+  font-size: 1.5rem;
+}
+
+.video-entry p {
+  font-size: 1rem;
+  color: #333;
+  margin: 6px 0;
+  padding-bottom: 20px;
+
+}
+
+.video-entry a {
+  color: #0055aa;
+  text-decoration: none;
+  border-bottom: 1px dashed #0055aa;
+}
+
+.video-entry a:hover {
+  color: #003366;
+  border-bottom: 1px solid #003366;
+}
+
+.video-thumbnail {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  width: 50%;
+  max-width: 500px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+  cursor: pointer;
+}
+
+.video-thumbnail img {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+}
+
+.video-thumbnail .play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+  color: white;
+  background-color: rgba(0,0,0,0.6);
+  padding: 5px 24px 8px 31px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.video-thumbnail:hover .play-button {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Contenedor principal */
+.recursos-cientificos {
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: 'Roboto', Arial, sans-serif;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.recursos-cientificos h2 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 25px;
+  font-weight: 600;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 10px;
+}
+
+/* Estilos para la lista */
+.recursos-lista {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Estilo para cada ítem de la lista */
+.recurso-item {
+  margin-bottom: 20px;
+  border-radius: 6px;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.recurso-item:hover {
+  transform: translateY(-3px);
+}
+
+/* Encabezado del ítem (institución) */
+.recurso-header {
+  background-color: #3498db;
+  color: white;
+  padding: 22px 25px;
+  font-weight: 600;
+  font-size: 1.1em;
+  display: block;
+  text-decoration: none;
+  position: relative;
+}
+
+.recurso-header:after {
+  content: "›";
+  position: absolute;
+  right: 15px;
+  font-size: 1.4em;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.recurso-logo {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  object-fit: contain;
+  border-radius: 4px;
+  padding: 2px;
+}
+
+/* Contenedor para los enlaces internos */
+.recurso-enlaces {
+  background-color: white;
+  padding: 15px;
+  border: 1px solid #e0e0e0;
+}
+
+/* Estilos para cada enlace dentro del ítem */
+.enlace-item {
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px dashed #eaeaea;
+}
+
+.enlace-item:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+/* Título del enlace */
+.enlace-titulo {
+  display: block;
+  font-weight: 600;
+  color: #2980b9;
+  margin-bottom: 5px;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.enlace-titulo:hover {
+  color: #1abc9c;
+  text-decoration: underline;
+}
+
+/* Descripción del enlace */
+.enlace-descripcion {
+  font-size: 0.9em;
+  color: #7f8c8d;
+  margin-top: 5px;
+  line-height: 1.4;
+}
+
+/* Adaptación para móviles */
+@media (max-width: 600px) {
+  .recursos-cientificos {
+    padding: 15px;
+  }
+  
+  .recurso-header {
+    font-size: 1em;
+  }
+}
